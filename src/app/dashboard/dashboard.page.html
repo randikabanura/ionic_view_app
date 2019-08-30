@@ -1,4 +1,4 @@
-<ion-header color="info">
+<ion-header>
     <ion-item class="row" lines="none">
         <ion-icon name="menu"></ion-icon>
         <ion-toolbar>
@@ -31,20 +31,20 @@
 
     <ion-card>
         <ion-card-content>
-        <ion-toolbar class="row">
-            <ion-avatar slot="start">
-                <img src="../../images/slide-1.png" style="width: 50px; height: 50px;">
-            </ion-avatar>
-            <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                <ion-card-title>Card Title</ion-card-title>
-            </ion-card-header>
-            <ion-buttons slot="primary">
-                <ion-button (click)="presentCardPopover($event)">
-                    <ion-icon slot="icon-only" name="more"></ion-icon>
-                </ion-button>
-            </ion-buttons>
-        </ion-toolbar>
+            <ion-toolbar class="row">
+                <ion-avatar slot="start">
+                    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                </ion-avatar>
+                <ion-card-header>
+                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                    <ion-card-title>Card Title</ion-card-title>
+                </ion-card-header>
+                <ion-buttons slot="primary">
+                    <ion-button (click)="presentCardPopover($event)">
+                        <ion-icon slot="icon-only" name="more"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-toolbar>
 
             <ion-item lines="none">
                 Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.
@@ -52,8 +52,8 @@
             <ion-item-divider></ion-item-divider>
             <ion-item lines="none">
                 <ion-icon slot="end" name="share-alt"></ion-icon>
-                <ion-icon slot="end" name="trash"></ion-icon>
-                <ion-icon slot="end" name="bookmark"></ion-icon>
+                <ion-icon slot="end" (click)="presentAlertConfirm($event)" name="trash"></ion-icon>
+                <ion-icon slot="end" (click)="presentToastAfterClickBookmark($event)" name="bookmark"></ion-icon>
             </ion-item>
         </ion-card-content>
     </ion-card>
@@ -61,20 +61,20 @@
 
     <ion-card>
         <ion-card-content>
-        <ion-toolbar class="row">
-            <ion-avatar slot="start">
-                <ion-img src="../../assets/avatar.svg" style="width: 50px; height: 50px;"></ion-img>
-            </ion-avatar>
-            <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                <ion-card-title>Card Title</ion-card-title>
-            </ion-card-header>
-            <ion-buttons slot="primary">
-                <ion-button (click)="presentCardPopover($event)">
-                    <ion-icon slot="icon-only" name="more"></ion-icon>
-                </ion-button>
-            </ion-buttons>
-        </ion-toolbar>
+            <ion-toolbar class="row">
+                <ion-avatar slot="start">
+                    <ion-img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"></ion-img>
+                </ion-avatar>
+                <ion-card-header>
+                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                    <ion-card-title>Card Title</ion-card-title>
+                </ion-card-header>
+                <ion-buttons slot="primary">
+                    <ion-button (click)="presentCardPopover($event)">
+                        <ion-icon slot="icon-only" name="more"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-toolbar>
 
             <ion-item lines="none">
                 Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.
@@ -82,8 +82,8 @@
             <ion-item-divider></ion-item-divider>
             <ion-item lines="none">
                 <ion-icon slot="end" name="share-alt"></ion-icon>
-                <ion-icon slot="end" name="trash"></ion-icon>
-                <ion-icon slot="end" name="bookmark"></ion-icon>
+                <ion-icon slot="end" (click)="presentAlertConfirm($event)" name="trash"></ion-icon>
+                <ion-icon slot="end" (click)="presentToastAfterClickBookmark($event)" name="bookmark"></ion-icon>
             </ion-item>
         </ion-card-content>
     </ion-card>
@@ -91,20 +91,20 @@
 
     <ion-card>
         <ion-card-content>
-        <ion-toolbar class="row">
-            <ion-avatar slot="start">
-                <img src="../../assets/avatar.svg" style="width: 50px; height: 50px;">
-            </ion-avatar>
-            <ion-card-header>
-                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-                <ion-card-title>Card Title</ion-card-title>
-            </ion-card-header>
-            <ion-buttons slot="primary">
-                <ion-button (click)="presentCardPopover($event)">
-                    <ion-icon slot="icon-only" name="more"></ion-icon>
-                </ion-button>
-            </ion-buttons>
-        </ion-toolbar>
+            <ion-toolbar class="row">
+                <ion-avatar slot="start">
+                    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                </ion-avatar>
+                <ion-card-header>
+                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                    <ion-card-title>Card Title</ion-card-title>
+                </ion-card-header>
+                <ion-buttons slot="primary">
+                    <ion-button (click)="presentCardPopover($event)">
+                        <ion-icon slot="icon-only" name="more"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-toolbar>
 
             <ion-item lines="none">
                 Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.
@@ -112,17 +112,16 @@
             <ion-item-divider></ion-item-divider>
             <ion-item lines="none">
                 <ion-icon slot="end" name="share-alt"></ion-icon>
-                <ion-icon slot="end" name="trash"></ion-icon>
-                <ion-icon slot="end" name="bookmark"></ion-icon>
+                <ion-icon slot="end" (click)="presentAlertConfirm($event)" name="trash"></ion-icon>
+                <ion-icon slot="end" (click)="presentToastAfterClickBookmark($event)" name="bookmark"></ion-icon>
             </ion-item>
         </ion-card-content>
     </ion-card>
 
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button>
+        <ion-fab-button (click)="navigateToAdd($event)">
             <ion-icon name="add"></ion-icon>
         </ion-fab-button>
     </ion-fab>
 </ion-content>
-
