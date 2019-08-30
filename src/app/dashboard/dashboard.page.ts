@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PopoverController} from "@ionic/angular";
-import {DashboardPopoverComponent} from "../dashboard-popover/dashboard-popover.component";
+import {DashboardPopoverComponent} from "./dashboard-popover/dashboard-popover.component";
+import {CardPopoverComponent} from "./card-popover/card-popover.component";
 
 @Component({
   selector: 'app-dashboard',
@@ -17,6 +18,14 @@ export class DashboardPage implements OnInit {
   async presentPopover(){
     const popover = await this.popOverContoller.create(({
       component: DashboardPopoverComponent,
+      event
+    }))
+    return await popover.present();
+  }
+
+  async presentCardPopover(){
+    const popover = await this.popOverContoller.create(({
+      component: CardPopoverComponent,
       event
     }))
     return await popover.present();

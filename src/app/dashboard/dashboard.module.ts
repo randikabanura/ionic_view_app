@@ -6,7 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { DashboardPage } from './dashboard.page';
-import {DashboardPopoverComponent} from "../dashboard-popover/dashboard-popover.component";
+import {DashboardPopoverComponent} from "./dashboard-popover/dashboard-popover.component";
+import {CardPopoverComponent} from "./card-popover/card-popover.component";
 
 const routes: Routes = [
   {
@@ -22,7 +23,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  entryComponents: [DashboardPopoverComponent],
-  declarations: [DashboardPage, DashboardPopoverComponent]
+  entryComponents: [DashboardPopoverComponent, CardPopoverComponent],
+  declarations: [DashboardPage, DashboardPopoverComponent, CardPopoverComponent]
 })
 export class DashboardPageModule {}
