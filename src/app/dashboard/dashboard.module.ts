@@ -8,8 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { DashboardPage } from './dashboard.page';
 import { DashboardPopoverComponent } from "./dashboard-popover/dashboard-popover.component";
 import { CardPopoverComponent } from "./card-popover/card-popover.component";
-import { AddPage } from './add/add.page';
-import { AddPageModule } from './add/add.module';
 
 const routes: Routes = [
   {

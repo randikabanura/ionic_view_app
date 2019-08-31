@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {PopoverController, NavController, AlertController, Platform} from "@ionic/angular";
+import { Router } from '@angular/router';
 
-import {LocalNotifications} from '@ionic-native/local-notifications/ngx'
-import {async} from "rxjs/internal/scheduler/async";
+import {LocalNotifications} from '@ionic-native/local-notifications/ngx';
 
 @Component({
     selector: 'app-dashboard-popover',
@@ -11,7 +11,7 @@ import {async} from "rxjs/internal/scheduler/async";
 })
 export class DashboardPopoverComponent implements OnInit {
 
-    constructor(public popoverController: PopoverController, public navCtrl: NavController, public alertCtrl: AlertController, public plt: Platform, public localNotifications: LocalNotifications) {
+    constructor(public popoverController: PopoverController, public navCtrl: NavController, public alertCtrl: AlertController, public plt: Platform, public localNotifications: LocalNotifications, public router: Router) {
         this.plt.ready().then((rdy) => {
             this.localNotifications.on('click').subscribe(async (notification) => {
                 let json = JSON.parse(notification.data);
@@ -44,6 +44,11 @@ export class DashboardPopoverComponent implements OnInit {
             text: 'Some Notifications',
             trigger: {at: new Date(new Date().getTime() + 5 * 1000)},
             data: {mydata: 'Sync has completed'}
-        })
+        });
+    }
+
+    navigateToSettings() {
+        this.close();
+        this.router.navigate(['settings']);
     }
 }
