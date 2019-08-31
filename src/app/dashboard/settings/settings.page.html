@@ -8,5 +8,11 @@
 </ion-header>
 
 <ion-content>
-
+    <ion-list>
+        <ion-list-header>Apperance</ion-list-header>
+        <ion-item>
+            <ion-text>Dark Theme</ion-text>
+            <ion-toggle [(ngModel)]="status" slot="end" color="dark" (ionChange)="toggleTheme()"></ion-toggle>
+        </ion-item>
+    </ion-list>
 </ion-content>
