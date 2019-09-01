@@ -53,8 +53,8 @@ export class DashboardPage implements OnInit {
 
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
-      header: 'Confirm!',
-      message: 'Message <strong>text</strong>!!!',
+      header: 'Confirm Deletion',
+      message: 'Are you sure want to delete this addmission ?',
       buttons: [
         {
           text: 'Cancel',

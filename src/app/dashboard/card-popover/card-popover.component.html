@@ -1,6 +1,6 @@
 <ion-list>
     <ion-list-header>Student Menu</ion-list-header>
     <ion-item button>Edit</ion-item>
-    <ion-item button>Delete</ion-item>
+    <ion-item (click)="presentAlertConfirm($event)" button>Delete</ion-item>
     <ion-item lines="none" button>My Lists</ion-item>
 </ion-list>

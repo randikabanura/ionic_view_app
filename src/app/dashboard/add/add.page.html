@@ -39,13 +39,36 @@
                     </ion-item>
 
                     <ion-item>
+                        <ion-label position="floating">Phone</ion-label>
+                        <ion-input max="10" type="number"></ion-input>
+                    </ion-item>
+
+                    <!-- <ion-item>
                         <ion-label position="stacked">Notes</ion-label>
                         <ion-textarea></ion-textarea>
+                    </ion-item> -->
+                    <ion-item>
+                        <ion-label position="floating">Birth date</ion-label>
+                        <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label position="floating">Blood Group</ion-label>
+                        <ion-select value="brown" okText="Okay" cancelText="Dismiss">
+                            <ion-select-option value="brown">A+</ion-select-option>
+                            <ion-select-option value="blonde">A-</ion-select-option>
+                            <ion-select-option value="black">B+</ion-select-option>
+                            <ion-select-option value="red">B-</ion-select-option>
+                            <ion-select-option value="brown">AB+</ion-select-option>
+                            <ion-select-option value="blonde">AB-</ion-select-option>
+                            <ion-select-option value="black">O-</ion-select-option>
+                            <ion-select-option value="red">O+</ion-select-option>
+                        </ion-select>
                     </ion-item>
                 </ion-list>
 
                 <div class="ion-padding">
-                    <ion-button expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
+                    <ion-button expand="block" type="submit" class="ion-no-margin">Save Admission</ion-button>
                 </div>
             </form>
         </ion-card-content>
